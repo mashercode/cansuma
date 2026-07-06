@@ -164,6 +164,25 @@
             line-height: 1.5;
         }
 
+        /* Şarkı Butonu */
+        .music-btn {
+            background: #fb6f92;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(251, 111, 146, 0.3);
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .music-btn:active {
+            transform: scale(0.95);
+        }
+
         /* Animasyonlar */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(15px); }
@@ -184,30 +203,35 @@
 </head>
 <body>
 
+    <!-- Akan kalpler -->
     <div id="heart-container"></div>
 
+    <!-- 1. SAYFA -->
     <div class="page">
         <div class="container">
+            <!-- Butona basınca YouTube'daki Ash - Gözleri Bal şarkısını açacak -->
+            <button class="music-btn" onclick="openSong()">Cansu için Bir Şarkı... 🎶</button>
             <h1>Cansu'ma...</h1>
             <div class="subtitle">Ömrümün En Güzel Detayı</div>
             
             <div class="heart-main">❤️</div>
 
             <div class="quote-box">
-                <p id="love-quote">Kalbime hoş geldin sevgilim...</p>
+                <p id="love-quote">"Yanımda kal gözleri bal, bakınca sana sözler akar..." 🎧</p>
             </div>
 
             <div class="scroll-hint">
-                Aşağı Kaydır Yarim 👇
+                Aşağı Kaydır Cansum 👇
             </div>
         </div>
     </div>
 
+    <!-- 2. SAYFA -->
     <div class="page">
         <div class="container">
             <div class="card">
                 <h3>Sınıfın Melek Öğretmeni 👩‍🏫</h3>
-                <p>O minik kalplere sevgiyle dokunuşun, dünyayı güzelleştiren o sabrın ve şefkatin beni sana her gün yeniden aşık ediyor.</p>
+                <p>O minik kalplere sevgiyle dokunuşun, dünyayı güzelleştiren o sabrın ve şefkatin hayran olunmayacak gibi değil.</p>
             </div>
 
             <div class="card">
@@ -217,12 +241,12 @@
 
             <div class="card">
                 <h3>O Derin Kahverengi Gözler 👀</h3>
-                <p>Dünyanın en güzel manzarası, bana her baktığında tüm dünyayı unuttuğum o kahve gözlerin. Ömrüm boyunca hep bana baksınlar...</p>
+                <p>Dünyanın en güzel manzarası, bana her baktığında tüm dünyayı unuttuğum o kahve gözlerin. Hep öyle güzel bak Cansum...</p>
             </div>
 
             <div class="inside-joke">
                 🚗💨 <strong>Bizim Yolculuğumuz:</strong><br>
-                "Sen yollarda frensiz sürüyorsun ya hani sevgilim... Ben de yanından dünyaya bağırıyorum: <em>'Çekiiiillll, Cansu geliyor!'</em> Sen kalbime de öyle frensiz girdin, iyi ki de geldin!"
+                "Sen yollarda frensiz sürüyorsun ya hani Cansum... Ben de yanından dünyaya bağırıyorum: <em>'Çekiiiillll, Cansu geliyor!'</em> Sen hayatıma da öyle frensiz ve enerjik girdin, iyi ki de varsın!"
             </div>
 
             <p style="font-size: 0.75rem; color: #a3a3a3; margin-top: 25px;">Senin için sevgiyle kodlandı... ✨</p>
@@ -230,66 +254,66 @@
     </div>
 
     <script>
-        // 50'den fazla özel söz listesi
+        // Temizlenmiş 52 söz listesi
         const quotes = [
-            "Gözlerinin kahvesinden koy ömrüme, bir ömür sen kalayım sevgilim.",
-            "Dünyanın en tatlı sınıf öğretmeni, kalbimin de tek sahibi.",
-            "Sahnede antrenör, sınıfta öğretmen, benim dünyamda ise bir melek.",
-            "Yollarda frensiz olduğun gibi, kalbime de frensiz girdin Cansu'm.",
-            "Sen köşeyi dönerken ben arkadan bağırayım: Çekiiiillll, aşkım geliyor!",
-            "O güzel kahverengi gözlerine her baktığımda rotamı kaybediyorum.",
-            "Seninle aynı sahada antrenörlük yapmak hayatın bana verdiği en güzel ödül.",
-            "Sınıftaki çocukların şansı, benim ise ömürlük duamsın.",
-            "Sen güldüğün zaman içimdeki tüm fırtınalar duruluyor.",
-            "Hayatın tüm yollarında frene basmadan seninle sonsuzluğa gitmeye hazırım.",
-            "Bir kadına öğretmenlik bu kadar mı yakışır, bir kadına antrenörlük bu kadar mı asil durur?",
-            "Kalbimin pasörü sensin, hayatımın en güzel smacını seninle vurdum.",
-            "Seni her halinle, en çok da o frensiz ve çılgın hallerinle seviyorum.",
-            "Gözlerindeki o derin kahve, bana kırk yıl değil bir ömür mutluluk vaat ediyor.",
-            "Sen benim hayatımda verdiğim en doğru kararsın Cansu.",
+            "\"Yanımda kal gözleri bal, bakınca sana sözler akar...\" 🎧",
+            "Gözlerinin kahvesinden koy ömrüme, bir ömür neşem kal Cansum.",
+            "Dünyanın en tatlı sınıf öğretmeni, kalbimin de en kıymetli yeri.",
+            "Sahnede antrenör, sınıfta öğretmen, benim dünyamda ise tam bir melek.",
+            "Yollarda frensiz olduğun gibi, dünyama da frensiz ve enerjik girdin Cansu'm.",
+            "Sen köşeyi dönerken ben arkadan bağırayım: Çekiiiillll, Cansum geliyor!",
+            "O güzel kahverengi gözlerine her baktığımda zaman duruyor sanki.",
+            "Seninle aynı sahada antrenörlük yapmak hayatın bana verdiği en güzel hediye.",
+            "Sınıftaki çocukların şansı, benim ise en güzel şansım sensin.",
+            "Sen güldüğün zaman bendeki tüm yorgunluklar uçup gidiyor.",
+            "Hayatın tüm yollarında frene basmadan seninle gitmeye hazırım.",
+            "Bir kadına öğretmenlik bu kadar mı yakışır, antrenörlük bu kadar mı asil durur?",
+            "Kalbimin pasörü sensin, en güzel pasları hep seninle paylaşıyorum.",
+            "Seni her halinle, en çok da o frensiz ve çılgın hallerinle çok seviyorum.",
+            "Gözlerindeki o derin kahve, bana kırk yıl değil bir ömür mutluluk veriyor.",
+            "Sen hayatımda karşıma çıkan en güzel, en değerli doğrumsun Cansu.",
             "Sınıfında bir çocuk olmayı isterdim, o güzel şefkatini her gün görebilmek için.",
-            "Dünyayı seninle frensiz gezmek, tehlikeli ama dünyanın en güzel şeyi.",
-            "Çekiiiillll diye bağırdığım her an, içimden seni ne kadar çok sevdiğimi haykırıyorum aslında.",
-            "Sen benim yanımdayken her şey tamam, her şey eksiksiz.",
-            "Gönlümün sultanı, sahaların fırtınası, iyi ki varsın.",
-            "Bir insanın bakışları bir ömrü nasıl güzelleştirebilir, seni görünce anladım.",
-            "Seni sevmek, frensiz bir arabada son sürat mutluluğa uçmak gibi.",
+            "Dünyayı seninle frensiz gezmek, kesinlikle dünyanın en eğlenceli şeyi.",
+            "Çekiiiillll diye bağırdığım her an, yüzündeki o tatlı gülümsemeyi görmek için.",
+            "Sen yanımdayken her şey o kadar enerjik ve o kadar güzel ki Cansum.",
+            "Gönlümün en güzel yeri, sahaların fırtınası, iyi ki varsın.",
+            "Bir insanın bakışları bir günü nasıl güzelleştirebilir, seni görünce anladım.",
+            "Seni tanımak, frensiz bir arabada neşeyle mutluluğa uçmak gibi.",
             "Senin o tatlı hanımefendiliğin benim en büyük huzur kaynağım.",
-            "Kalbin kalbime o kadar yakıştı ki, başka hiçbir yeri istemiyor bu gönül.",
-            "Sınıfının tahtasına adımı yaz sevgilim, senin en sadık öğrencin benim.",
-            "Hayat arkadaşım, meslektaşım, ruh ikizim... Seni çok seviyorum.",
-            "O kahverengi gözlerin parlayınca benim dünyama güneş doğuyor.",
-            "Sen frensiz sür, ben yolları senin için temizlerim canımın içi.",
-            "Kalbimin en güzel köşesinde sadece senin adın yazıyor.",
-            "Seninle geçen her saniye, ömrüme ömür katıyor.",
-            "Sen sahalara taktik verirken, ben sadece seni izleyip büyüleniyorum.",
-            "Her günün seninle başlaması ve seninle bitmesi tek dileğim.",
-            "Hayatımın en güzel sınıf öğretmeni, kalbimin dersi sensin.",
-            "Senin o frensiz sürüşlerin bile bana dünyanın en güvenli yeri gibi geliyor.",
-            "Öyle güzel bakıyorsun ki, kahverengi gözlerin siyah beyaz dünyamı renklendiriyor.",
-            "Sen benim eksik kalan tüm yanlarımsın Cansu'm.",
-            "İyi ki benimlesin, iyi ki benim sevgilimsin.",
-            "Seninle her zorluk kolay, seninle her acı tatlı hale geliyor.",
-            "Kalbimin baş antrenörü sensin, aşk taktiğini sen veriyorsun.",
-            "Dünyadaki tüm güzel sözler seni anlatmaya yetersiz kalıyor.",
-            "Ben senin o frensiz dünyana, o çılgın neşene aşık oldum.",
-            "Sen benim hayatımın en tatlı, en güzel hanımefendisisin.",
-            "Gözlerinin içine baktığımda geleceğimi görüyorum.",
-            "Çekiiiillll desek de yollara, sen kalbimin tam ortasında dur sevgilim.",
-            "Senin sevgin bana her gün yeni bir hayat sunuyor.",
-            "Sınıfındaki minikler kadar şanslı olmak isterdim, her gün sesini duymak için.",
-            "Aşkın frensiz hali en güzeliymiş, seninle yaşayınca anladım.",
-            "Benim dünyam senin o kahverengi gözlerinde saklı.",
-            "Seninle atılan her adım, geleceğe yazılan en güzel hikaye.",
-            "Güzelliğin kalbimi eritiyor, zarafetin beni sana bağlıyor.",
-            "İyi ki hayatımdasın, iyi ki kalbimin sahibisin Cansum.",
-            "Sonsuza kadar seninle, frensiz ve sevgi dolu bir ömre..."
+            "Zarafetin ve enerjin kalbime o kadar yakıştı ki Cansum.",
+            "Sınıfının tahtasına adımı yaz canımın içi, senin en çalışkan öğrencin benim.",
+            "Hayat yolum, meslektaşım, en iyi takım arkadaşım... İyi ki varsın.",
+            "O kahverengi gözlerin parlayınca benim dünyama neşe doğuyor.",
+            "Sen frensiz sür Cansum, ben yolları senin için her zaman açarım.",
+            "Dünyanın en güzel köşesi, seninle yan yana durduğumuz o sahadır.",
+            "Seninle geçen her saniye, ömrüme büyük bir enerji katıyor.",
+            "Sen sahalara taktik verirken, ben sadece senin o başarına hayran kalıyorum.",
+            "Her günün senin o güzel enerjinle başlaması en büyük dileğim.",
+            "Hayatımın en güzel sınıf öğretmeni, günümün en güzel dersi sensin.",
+            "Senin o frensiz sürüşlerin bile bana dünyanın en keyifli yolculuğu gibi geliyor.",
+            "Öyle güzel bakıyorsun ki, kahverengi gözlerin etrafındaki her şeyi renklendiriyor.",
+            "Sen benim hayatımdaki en tatlı, en cana yakın detaysın Cansu'm.",
+            "İyi ki hayatımdasın, iyi ki benim en yakın arkadaşım, her şeyimsin.",
+            "Seninle her zorluk kolay, seninle her antrenman çok daha keyifli hale geliyor.",
+            "Sahanın da kalbimin de baş antrenörü sensin Cansum.",
+            "Dünyadaki tüm güzel kelimeler seni anlatmaya yetersiz kalıyor.",
+            "Ben senin o frensiz dünyana, o hiç bitmeyen harika neşene hayranım.",
+            "Sen karşıma çıkan en tatlı, en asil hanımefendisin Cansum.",
+            "Gözlerinin içine baktığımda huzur dolu bir gelecek görüyorum.",
+            "Çekiiiillll desek de yollara, sen hep hayatımın tam merkezinde kal Cansum.",
+            "Senin o güzel enerjin bana her gün yeni bir motivasyon sunuyor.",
+            "Sınıfındaki minikler kadar şanslı olmak isterdim, her gün o tatlı sesini duymak için.",
+            "Hayatın frensiz hali en güzeliymiş, senin o dinamik dünyanda bunu anladım.",
+            "Benim en güzel günlerim senin o kahverengi gözlerinde saklı.",
+            "Seninle atılan her adım, geleceğe yazılan en neşeli hikayedir.",
+            "Güzelliğin ve zarafetin insanı kendine hayran bırakıyor Cansum.",
+            "İyi ki varsın, iyi ki hayatının en güzel, en frensiz parçasısın.",
+            "Sonsuza kadar seninle, neşeli, frensiz ve başarı dolu günlere..."
         ];
 
         let quoteIndex = 0;
         const quoteElement = document.getElementById("love-quote");
 
-        // Sözleri sırayla ve animasyonlu değiştirme fonksiyonu
         function changeQuote() {
             quoteElement.style.opacity = 0;
             setTimeout(() => {
@@ -298,23 +322,20 @@
                 quoteElement.style.opacity = 1;
             }, 500);
         }
-        // 4 saniyede bir değiştir
-        setInterval(changeQuote, 4000);
+        // İlk söz şarkı sözü olarak başlayacak, ardından 5 saniye sonra dönecek
+        setInterval(changeQuote, 5000);
 
-        // Arka planda sürekli akan kalpler oluşturma fonksiyonu
         function createHeart() {
             const container = document.getElementById("heart-container");
             const heart = document.createElement("div");
             heart.classList.add("falling-heart");
             
-            // Farklı kalp emojileri
             const heartTypes = ["❤️", "💖", "💝", "💕", "💗"];
             heart.textContent = heartTypes[Math.floor(Math.random() * heartTypes.length)];
             
-            // Rastgele konum, boyut ve hız ayarları
             const startLeft = Math.random() * 100;
-            const size = Math.random() * 12 + 10; // 10px - 22px arası
-            const duration = Math.random() * 3 + 4; // 4s - 7s arası
+            const size = Math.random() * 12 + 10;
+            const duration = Math.random() * 3 + 4;
             
             heart.style.left = startLeft + "vw";
             heart.style.fontSize = size + "px";
@@ -322,13 +343,16 @@
             
             container.appendChild(heart);
             
-            // Ekranı yormasın diye düşen kalbi sil
             setTimeout(() => {
                 heart.remove();
             }, duration * 1000);
         }
-        // Her 400 milisaniyede bir yeni kalp bırak
         setInterval(createHeart, 400);
+
+        // Şarkı linkini yeni sekmede açma fonksiyonu
+        function openSong() {
+            window.open("https://www.youtube.com/watch?v=Ikd7ZpufBeQ", "_blank");
+        }
     </script>
 </body>
 </html>
